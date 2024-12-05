@@ -1,4 +1,4 @@
-from imdb import IMDb
+import imdb
 
 
 
@@ -6,9 +6,9 @@ class imdb_connect:
 
     # Initialize IMDb instance
     
-    ia = IMDb()
+    
     def __init__(self):
-        ia = IMDb()
+        self.ia = imdb.Cinemagoer()
 
     # Function to get all movies by an actor's name
     def get_movies_by_actor(self,actor_name):
@@ -18,6 +18,7 @@ class imdb_connect:
         if people:
             # Get the first person in the search result (if multiple results, you can refine)
             actor = people[0]
+            print(actor)
             actor_id = actor.personID
             
             # Get the actor's filmography
